@@ -524,3 +524,511 @@ var wpcf7 = {
 <script src="https:/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1" id="contact-form-7-js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Haven - Premium Natural Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-leaf text-2xl"></i>
+                    <span class="font-bold text-xl">Nature's Haven</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-green-200 transition">Home</a>
+                    <a href="#products" class="hover:text-green-200 transition">Products</a>
+                    <a href="#about" class="hover:text-green-200 transition">About</a>
+                    <a href="#testimonials" class="hover:text-green-200 transition">Testimonials</a>
+                    <a href="#contact" class="hover:text-green-200 transition">Contact</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="hover:text-green-200 transition"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#" class="hover:text-green-200 transition"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 hover:bg-green-700 px-2 rounded">Home</a>
+                <a href="#products" class="block py-2 hover:bg-green-700 px-2 rounded">Products</a>
+                <a href="#about" class="block py-2 hover:bg-green-700 px-2 rounded">About</a>
+                <a href="#testimonials" class="block py-2 hover:bg-green-700 px-2 rounded">Testimonials</a>
+                <a href="#contact" class="block py-2 hover:bg-green-700 px-2 rounded">Contact</a>
+                <div class="flex space-x-4 mt-2">
+                    <a href="#" class="px-3 py-1 bg-green-600 rounded hover:bg-green-500"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    <a href="#" class="px-3 py-1 bg-green-600 rounded hover:bg-green-500"><i class="fas fa-user"></i> Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Embrace Nature's Goodness</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Premium natural products crafted with care for you and the environment</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#products" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">Shop Now</a>
+                <a href="#about" class="bg-white hover:bg-gray-100 text-green-800 font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Why Choose Nature's Haven</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6 rounded-lg bg-green-50 hover:bg-green-100 transition">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-seedling text-green-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-green-800">100% Organic</h3>
+                    <p class="text-gray-600">All our products are made from certified organic ingredients sourced from sustainable farms.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center p-6 rounded-lg bg-green-50 hover:bg-green-100 transition">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-recycle text-green-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-green-800">Eco-Friendly</h3>
+                    <p class="text-gray-600">We use biodegradable packaging and carbon-neutral shipping to minimize our environmental impact.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center p-6 rounded-lg bg-green-50 hover:bg-green-100 transition">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-heart text-green-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-green-800">Handcrafted</h3>
+                    <p class="text-gray-600">Each product is carefully crafted in small batches to ensure the highest quality and freshness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-green-800">Our Natural Products</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Discover our range of premium natural products that will bring the goodness of nature into your home</p>
+            
+            <div class="flex justify-center mb-8">
+                <div class="flex flex-wrap gap-2">
+                    <button class="px-4 py-2 bg-green-700 text-white rounded-full">All</button>
+                    <button class="px-4 py-2 bg-white text-green-700 border border-green-700 rounded-full hover:bg-green-50">Essential Oils</button>
+                    <button class="px-4 py-2 bg-white text-green-700 border border-green-700 rounded-full hover:bg-green-50">Herbal Teas</button>
+                    <button class="px-4 py-2 bg-white text-green-700 border border-green-700 rounded-full hover:bg-green-50">Skincare</button>
+                    <button class="px-4 py-2 bg-white text-green-700 border border-green-700 rounded-full hover:bg-green-50">Home Decor</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Lavender Essential Oil" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">BESTSELLER</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1 text-green-800">Lavender Essential Oil</h3>
+                        <p class="text-gray-600 text-sm mb-3">Promotes relaxation and better sleep</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-700">$14.99</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-full text-sm transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Chamomile Tea" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1 text-green-800">Organic Chamomile Tea</h3>
+                        <p class="text-gray-600 text-sm mb-3">Calming herbal blend for stress relief</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-700">$9.99</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-full text-sm transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Aloe Vera Gel" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">NEW</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1 text-green-800">Pure Aloe Vera Gel</h3>
+                        <p class="text-gray-600 text-sm mb-3">Soothes and hydrates all skin types</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-700">$12.99</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-full text-sm transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Bamboo Toothbrush" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1 text-green-800">Bamboo Toothbrush Set</h3>
+                        <p class="text-gray-600 text-sm mb-3">Eco-friendly alternative to plastic</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-700">$7.99</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-full text-sm transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-green-700 text-green-700 font-bold py-2 px-6 rounded-full hover:bg-green-700 hover:text-white transition">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1526397751294-331021109fbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="About Nature's Haven" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-green-800">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2015, Nature's Haven began as a small family business with a passion for bringing the healing power of nature into people's homes. What started as a hobby of creating homemade herbal remedies has grown into a thriving business committed to sustainability and wellness.</p>
+                    <p class="text-gray-600 mb-6">We believe in the power of nature to heal, nourish, and restore. Every product we create is made with the highest quality ingredients, sourced ethically from farmers who share our values. We're proud to offer products that are good for you and good for the planet.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition text-center">Meet Our Team</a>
+                        <a href="#" class="border-2 border-green-600 text-green-600 font-bold py-2 px-6 rounded-full hover:bg-green-50 transition text-center">Our Sustainability Promise</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-green-800">What Our Customers Say</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Don't just take our word for it - hear from our happy customers</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J." class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-green-800">Sarah J.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The lavender oil has completely transformed my sleep routine. I've tried many brands, but Nature's Haven is by far the most effective. The scent is pure and lasts all night."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T." class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-green-800">Michael T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"As someone with sensitive skin, I'm always cautious about what I use. The aloe vera gel is incredibly soothing and doesn't irritate my skin at all. Will definitely repurchase!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma L." class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-green-800">Emma L.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"I love that I can enjoy high-quality natural products while also supporting sustainable practices. The chamomile tea is now a staple in my evening routine. So calming!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-green-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Our Green Community</h2>
+            <p class="max-w-2xl mx-auto mb-8">Subscribe to our newsletter and get 10% off your first order, plus receive exclusive offers, wellness tips, and sustainable living ideas.</p>
+            
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-full text-gray-800 focus:outline-none">
+                <button type="submit" class="bg-white text-green-700 font-bold px-6 py-2 rounded-full hover:bg-gray-100 transition">Subscribe</button>
+            </form>
+            
+            <p class="text-sm mt-4 text-green-200">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Get In Touch</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4 text-green-700">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 text-green-600 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-green-800">Address</h4>
+                                <p class="text-gray-600">123 Nature Way, Green Valley, CA 90210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 text-green-600 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-green-800">Phone</h4>
+                                <p class="text-gray-600">(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 text-green-600 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-green-800">Email</h4>
+                                <p class="text-gray-600">hello@natureshaven.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-clock mt-1 text-green-600 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-green-800">Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 9am - 5pm PST</p>
+                                <p class="text-gray-600">Saturday: 10am - 3pm PST</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold mt-8 mb-4 text-green-700">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-700 hover:bg-green-200 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-700 hover:bg-green-200 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-700 hover:bg-green-200 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-700 hover:bg-green-200 transition"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4 text-green-700">Send Us a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-leaf text-2xl"></i>
+                        <span class="font-bold text-xl">Nature's Haven</span>
+                    </div>
+                    <p class="text-green-200">Bringing the healing power of nature into your home since 2015.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-green-200 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition">Shop</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-green-200 hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition">Shipping Policy</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition">Returns & Refunds</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Payment Methods</h3>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <i class="fab fa-cc-visa text-2xl"></i>
+                        <i class="fab fa-cc-mastercard text-2xl"></i>
+                        <i class="fab fa-cc-amex text-2xl"></i>
+                        <i class="fab fa-cc-discover text-2xl"></i>
+                        <i class="fab fa-cc-paypal text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Newsletter</h3>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-1 text-gray-800 rounded-l focus:outline-none w-full">
+                        <button type="submit" class="bg-green-600 hover:bg-green-700 px-3 py-1 rounded-r"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-800 mt-8 pt-8 text-center text-green-300">
+                <p>&copy; 2023 Nature's Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add fade-in animation to elements as they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
